@@ -42,6 +42,7 @@ img
 {
     max-width: 1140px;
     margin: auto;
+    /* height : 100px; */
 }
 .row
 {
@@ -260,14 +261,19 @@ img
     background-color: var(--white);
 }
 /*===== Home =====*/
-.home-section
-{
+.home-section {
     position: relative;
     background-color: var(--black-100);
     z-index: 1;
     overflow-x: hidden;
-    padding-top: 80px;
+
+    min-height: 100vh;              /* 🔥 KEY FIX */
+    padding-top: 100px;             /* space for navbar */
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;            /* vertical centering */
 }
+
 .header-social
 {
     position: absolute;
@@ -291,12 +297,13 @@ img
     color: var(--main-color);
 }
 .home-section .home-text,
-.home-section .home-image
-{
+.home-section .home-image {
     flex: 0 0 50%;
     max-width: 50%;
     padding: 0 25px;
+    min-height: 60vh;   /* ensures balance */
 }
+
 .home-section .home-text h4
 {
     font-size: 30px;
@@ -1127,3 +1134,132 @@ footer .copyright-text
         max-width: 100%;
     }
 }
+
+.home-section .row {
+    align-items: center;
+}
+
+
+.about-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* LEFT SIDE */
+.about-left {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 20px;
+}
+
+/* RIGHT SIDE */
+.about-right {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 20px;
+}
+
+/* Optional: spacing polish */
+.about-right .skill-item:first-child {
+    margin-top: 40px;
+}
+
+
+.about-left p {
+    text-align: justify;
+    hyphens: auto;
+    line-height: 1.7;
+}
+
+.home-text p{
+     text-align: justify;
+    hyphens: auto;
+    line-height: 1.7;
+}
+
+@media (max-width: 767px) {
+    .about-left p {
+        text-align: left;
+    }
+}
+
+.video-modal {
+    display: none;              /* IMPORTANT */
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    z-index: 9999;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+.video-content {
+    position: relative;
+    width: 70%;
+    max-width: 800px;
+    background: transparent;
+    padding: 0;
+    border-radius: 2px;
+    
+}
+
+.video-content video {
+    width: 100%;
+}
+
+.close-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #fff;
+    color: #000;
+    font-size: 26px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 34px;
+    cursor: pointer;
+}
+
+
+.video-content video {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Remove focus border when clicked */
+.video-content video:focus {
+    outline: none;
+    border: none;
+}
+
+/* Remove any iframe border just in case */
+.video-content iframe {
+    border: none;
+    outline: none;
+}
+
+.services-row {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: nowrap;     /* 🔥 forces single line */
+}
+
+.service-item {
+    flex: 1;
+}
+
+.service-link {
+    text-decoration: none;
+    color: inherit;
+    flex: 1;
+    cursor: pointer;
+}
+
+

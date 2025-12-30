@@ -157,3 +157,23 @@
                         toggleLightbox()
                      }
                   })
+
+
+                  function openVideoModal() {
+    const modal = document.getElementById("videoModal");
+    const video = document.getElementById("projectVideo");
+
+    modal.style.display = "flex";
+    video.play();
+}
+
+function closeVideoModal() {
+    const modal = document.getElementById("videoModal");
+    const video = document.getElementById("projectVideo");
+
+    video.pause();
+    video.currentTime = 0;
+    modal.style.display = "none";
+}
+
+    
