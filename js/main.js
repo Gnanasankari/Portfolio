@@ -176,4 +176,26 @@ function closeVideoModal() {
     modal.style.display = "none";
 }
 
-    
+   document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs.send(
+    "service_x7bs5k4",
+    "template_csiur7n",
+    {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      subject: document.getElementById("subject").value,
+      message: document.getElementById("message").value,
+    }
+  )
+  .then(() => {
+    alert("Message sent successfully!");
+    document.getElementById("contactForm").reset();
+  })
+  .catch((error) => {
+    alert("Failed to send message");
+    console.error(error);
+  });
+});
+
