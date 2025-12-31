@@ -1327,3 +1327,219 @@ footer .copyright-text
 }
 
 
+/* =========================================================
+   MOBILE RESPONSIVE FIXES (ADD ONLY – DO NOT MODIFY ABOVE)
+   ========================================================= */
+
+/* Extra small devices (phones) */
+@media (max-width: 576px) {
+
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Container padding */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* HOME SECTION */
+  .home-section {
+    padding-top: 90px;
+    padding-bottom: 40px;
+    min-height: auto;
+  }
+
+  .home-section .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-section .home-text,
+  .home-section .home-image {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 15px;
+    min-height: auto;
+  }
+
+  .home-section .home-text h1 {
+    font-size: 32px;
+  }
+
+  .home-section .home-text h4 {
+    font-size: 22px;
+  }
+
+  .home-section .home-text span,
+  .home-section .home-text p {
+    font-size: 15px;
+  }
+
+  /* Hide hero skew shape on mobile */
+  .header-hero-shape {
+    display: none;
+  }
+
+  /* SOCIAL ICON BAR – hide completely on small phones */
+  .header-social {
+    display: none !important;
+  }
+
+  /* ABOUT SECTION */
+  .about-row {
+    flex-direction: column;
+  }
+
+  .about-left,
+  .about-right {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  /* Skills spacing */
+  .about-right .skill-item:first-child {
+    margin-top: 20px;
+  }
+
+  /* SERVICES */
+  .services-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .service-section .service-item {
+    max-width: 100%;
+  }
+
+  /* PORTFOLIO */
+  .portfolio .portfolio-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* PRICING */
+  .pricing .pricing-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* CONTACT */
+  .contact-section .contact-item,
+  .contact-section .w-50 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .contact-section .submit-btn {
+    text-align: center;
+  }
+
+  /* VIDEO MODAL */
+  .video-content {
+    width: 95%;
+  }
+
+  /* LIGHTBOX IMAGE */
+  .lightbox .lightbox-content .lightbox-img {
+    max-height: 300px;
+  }
+}
+
+/* Small tablets */
+@media (max-width: 768px) {
+
+  .home-section .home-text h1 {
+    font-size: 36px;
+  }
+
+  .home-section .home-text h4 {
+    font-size: 24px;
+  }
+
+  .services-row {
+    flex-wrap: wrap;
+  }
+
+}
+/* =====================================================
+   FIX SKILLS SECTION LAYOUT ON MOBILE ONLY
+   ===================================================== */
+
+@media (max-width: 576px) {
+
+  /* Each skill item spacing */
+  .skill-item {
+    margin-bottom: 30px;
+  }
+
+  /* Make header stack instead of absolute overlap */
+  .skill-item .skill-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: static;
+  }
+
+  /* Skill title */
+  .skill-item .skill-header .skill-title {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  /* Percentage below title */
+  .skill-item .skill-header .skill-percentage {
+    position: static;
+    margin-bottom: 8px;
+  }
+
+  .skill-item .skill-header .skill-percentage p {
+    font-size: 14px;
+  }
+
+  /* Skill bar full width */
+  .skill-item .skill-bar {
+    width: 100%;
+  }
+
+  .skill-item .skill-bar .bar-inner {
+    width: 100%;
+  }
+}
+
+/* =====================================================
+   FORCE SKILL BARS TO FULL WIDTH ON MOBILE
+   ===================================================== */
+
+@media (max-width: 576px) {
+
+  /* Ensure right container truly takes full width */
+  .about-right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Each skill item must expand fully */
+  .skill-item {
+    width: 100%;
+  }
+
+  /* Skill bar wrapper */
+  .skill-item .skill-bar {
+    width: 100%;
+  }
+
+  /* Actual bar container */
+  .skill-item .skill-bar .bar-inner {
+    width: 100% !important;
+  }
+
+  /* Progress line stays relative to full bar */
+  .skill-item .skill-bar .bar-inner .progress-line {
+    max-width: 100%;
+  }
+}
+
